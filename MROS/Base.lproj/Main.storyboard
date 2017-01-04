@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ipy-bp-OuX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--会议室预定-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="DTT-1y-gAc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="q6u-DP-nfF"/>
+                                </constraints>
+                            </scrollView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiP-oZ-wkB">
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gn5-nW-XZz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <connections>
+                                    <segue destination="QEz-Lc-Wfj" kind="embed" identifier="ReservedListSegue" id="ctu-1l-oOC"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h85-mZ-H52">
+                                <rect key="frame" x="16" y="635" width="96" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="cDQ-Qq-RH5"/>
+                                    <constraint firstAttribute="height" constant="22" id="kyV-d9-ra8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="  已添加预定" image="arr-down-icon">
+                                    <color key="titleColor" red="0.023529411760000001" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showReservedList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiz-3f-KYm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MV-J0-66X">
+                                <rect key="frame" x="288" y="630" width="71" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="etE-Dj-oOE"/>
+                                    <constraint firstAttribute="height" constant="30" id="nCM-CK-mY1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="确定预定">
+                                    <color key="titleColor" red="0.023529411760000001" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UaX-Us-nWy"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKU-NQ-lTM">
+                                <rect key="frame" x="0.0" y="623" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="r2D-vb-Kvn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5MV-J0-66X" secondAttribute="bottom" constant="7" id="1h3-qF-r00"/>
+                            <constraint firstAttribute="bottom" secondItem="NiP-oZ-wkB" secondAttribute="bottom" constant="44" id="9NI-P4-qD9"/>
+                            <constraint firstItem="NiP-oZ-wkB" firstAttribute="top" secondItem="DTT-1y-gAc" secondAttribute="bottom" id="9nY-PT-aVw"/>
+                            <constraint firstItem="Gn5-nW-XZz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BsH-dE-iME"/>
+                            <constraint firstAttribute="bottom" secondItem="Gn5-nW-XZz" secondAttribute="bottom" constant="44" id="Cdm-UR-6jZ"/>
+                            <constraint firstItem="WKU-NQ-lTM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HR5-f7-l3o"/>
+                            <constraint firstItem="DTT-1y-gAc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Loq-Eh-nnL"/>
+                            <constraint firstAttribute="trailing" secondItem="NiP-oZ-wkB" secondAttribute="trailing" id="Qf2-g8-hPs"/>
+                            <constraint firstItem="Gn5-nW-XZz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tdd-A5-dNu"/>
+                            <constraint firstAttribute="trailing" secondItem="5MV-J0-66X" secondAttribute="trailing" constant="16" id="buy-9K-eJH"/>
+                            <constraint firstAttribute="trailing" secondItem="WKU-NQ-lTM" secondAttribute="trailing" id="fBN-o2-hTf"/>
+                            <constraint firstAttribute="trailing" secondItem="Gn5-nW-XZz" secondAttribute="trailing" id="fYg-VK-gdm"/>
+                            <constraint firstItem="h85-mZ-H52" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="gWJ-0a-IeU"/>
+                            <constraint firstAttribute="bottom" secondItem="h85-mZ-H52" secondAttribute="bottom" constant="10" id="gx8-zT-C58"/>
+                            <constraint firstItem="DTT-1y-gAc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kJy-Zc-2w1"/>
+                            <constraint firstAttribute="bottom" secondItem="WKU-NQ-lTM" secondAttribute="bottom" constant="43" id="lTE-mz-3iB"/>
+                            <constraint firstAttribute="trailing" secondItem="DTT-1y-gAc" secondAttribute="trailing" id="lrc-2H-rw9"/>
+                            <constraint firstItem="NiP-oZ-wkB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oOW-tX-RUQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="会议室预定" id="c0d-zw-HQm"/>
+                    <connections>
+                        <outlet property="reserveButton" destination="h85-mZ-H52" id="pLa-Ne-PEC"/>
+                        <outlet property="reserveListView" destination="Gn5-nW-XZz" id="Abi-Gi-yuu"/>
+                        <outlet property="scrollBackView" destination="NiP-oZ-wkB" id="QVi-fF-hZz"/>
+                        <outlet property="weekedScrollView" destination="DTT-1y-gAc" id="8qW-6D-qeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="113.79310344827587"/>
+        </scene>
+        <!--Reserve List Table View Controller-->
+        <scene sceneID="Xi9-lA-gM8">
+            <objects>
+                <tableViewController id="QEz-Lc-Wfj" customClass="ReserveListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ksi-Rq-hAH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="137" id="Lq2-4x-j6h" customClass="ReserveListTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="137"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lq2-4x-j6h" id="pn5-jg-HgC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:00 - 9:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTU-Se-DQR">
+                                            <rect key="frame" x="15" y="11" width="167" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="会议室一" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49R-Yf-Hxc">
+                                            <rect key="frame" x="261" y="11" width="91" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QEz-Lc-Wfj" id="73i-KG-1Z9"/>
+                            <outlet property="delegate" destination="QEz-Lc-Wfj" id="aYC-cH-dJl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sK3-y3-1hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="64.31784107946028"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GV5-Ki-gKQ">
+            <objects>
+                <viewController id="LFn-i9-aes" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Jb-cH-a32"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVO-AX-7Ng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kuc-xe-uOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZ0-jU-3jw">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pME-t8-yNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722.4000000000001" y="108.39580209895054"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IIP-Vc-oK1">
+            <objects>
+                <navigationController storyboardIdentifier="ReservedMeeting" id="Ipy-bp-OuX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bJj-Mg-LI7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WLT-5M-y3b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nij-ja-5z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arr-down-icon" width="10" height="6"/>
+    </resources>
+</document>
